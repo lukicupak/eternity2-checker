@@ -22,7 +22,7 @@ const YELLOW_SQUARE_PLUS = 21
 const PINK_CIRCLE = 22
 const BOARD = 0
 
-const squares = [
+const SQUARES_DB = [
   { id: 1, type: BLUE_PLUS },
   { id: 2, type: YELLOW_ROUND_PLUS },
   { id: 3, type: GREEN_CIRCLE },

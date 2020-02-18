@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Eternity</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>Eternity II Calculator</h1>
+
+    <p>Combination to start with:</p>
+    <div class="inputWrapper">
+      <textarea id="input" rows="15" cols="100"></textarea>
+    </div>
+
+    <p id="error"></p>
+
+    <div class="buttonsContainer">
+      <button id="startButton">Start</button>
+      <button id="loadCombinationButton">Load combination</button>
+    </div>
+
+    <p>Statistics:</p>
+
+    <table>
+      <tr>
+        <th>Comb/s (1s)</th>
+        <th>Comb/s</th>
+        <th>Combinations</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td id="stats-combinations-per-s-for-cycle">-</td>
+        <td id="stats-combinations-per-s-total">-</td>
+        <td id="stats-total-combinations">-</td>
+        <td id="stats-time">-</td>
+      </tr>
+    </table>
+
+    <script src="database.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

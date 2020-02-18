@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+button {
+  min-width: 150px;
+  min-height: 30px;
+}
+
+table {
+  margin: auto;
+}
+
+.inputWrapper {
+  margin-bottom: 50px;
+}
+
+#error {
+  color: red;
+}

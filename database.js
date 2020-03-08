@@ -1,66 +1,77 @@
-const BLUE_PLUS = 1
-const YELLOW_ROUND_PLUS = 2
-const GREEN_CIRCLE = 3
-const PINK_SHARP_PLUS = 4
-const OCTAGON = 5
-const YELLOW_CIRCLE = 6
-const PINK_SQUARE_PLUS = 7
-const ORANGE_ROUND_PLUS = 8
-const YELLOW_FLOWER = 9
-const BLUE_SHARP_PLUS = 10
-const ORANGE_SHARP_PLUS = 11
-const DARK_BLUE_SQUARE_PLUS = 12
-const ORANGE_FLOWER = 13
-const PINK_ROUND_PLUS = 14
-const GREEN_SQUARE = 15
-const BLUE_SQUARE = 16
-const PINK_DIAMOND = 17
-const BLUE_STAR = 18
-const YELLOW_STAR = 19
-const PURPLE_STAR = 20
-const YELLOW_SQUARE_PLUS = 21
-const PINK_CIRCLE = 22
 const BOARD = 0
 
+const ORANGE_ROUND_PLUS = 1
+const PINK_SQUARE_PLUS = 2
+const YELLOW_CIRCLE = 3
+const OCTAGON = 4
+const PINK_SHARP_PLUS = 5
+const GREEN_CIRCLE = 6
+const YELLOW_ROUND_PLUS = 7
+const BLUE_PLUS = 8
+const BLUE_SQUARE = 9
+const GREEN_SQUARE = 10
+const PINK_ROUND_PLUS = 11
+const ORANGE_FLOWER = 12
+const DARK_BLUE_SQUARE_PLUS = 13
+const ORANGE_SHARP_PLUS = 14
+const BLUE_SHARP_PLUS = 15
+const YELLOW_FLOWER = 16
+const PINK_CIRCLE = 17
+const YELLOW_SQUARE_PLUS = 18
+const PURPLE_STAR = 19
+const YELLOW_STAR = 20
+const BLUE_STAR = 21
+const PINK_DIAMOND_INSIDE = 22
+
 const SQUARES_DB = [
-  { id: 1, type: BLUE_PLUS },
-  { id: 2, type: YELLOW_ROUND_PLUS },
-  { id: 3, type: GREEN_CIRCLE },
-  { id: 4, type: PINK_SHARP_PLUS },
-  { id: 5, type: OCTAGON },
-  { id: 6, type: YELLOW_CIRCLE },
-  { id: 7, type: PINK_SQUARE_PLUS },
-  { id: 8, type: ORANGE_ROUND_PLUS },
-  { id: 9, type: YELLOW_FLOWER },
-  { id: 10, type: BLUE_SHARP_PLUS },
-  { id: 11, type: ORANGE_SHARP_PLUS },
-  { id: 12, type: DARK_BLUE_SQUARE_PLUS },
-  { id: 13, type: ORANGE_FLOWER },
-  { id: 14, type: PINK_ROUND_PLUS },
-  { id: 15, type: GREEN_SQUARE },
-  { id: 16, type: BLUE_SQUARE },
-  { id: 17, type: PINK_DIAMOND },
-  { id: 18, type: BLUE_STAR },
-  { id: 19, type: YELLOW_STAR },
-  { id: 20, type: PURPLE_STAR },
-  { id: 21, type: YELLOW_SQUARE_PLUS },
-  { id: 22, type: PINK_CIRCLE },
+  { id: 1, type: ORANGE_ROUND_PLUS },
+  { id: 2, type: PINK_SQUARE_PLUS },
+  { id: 3, type: YELLOW_CIRCLE },
+  { id: 4, type: OCTAGON },
+
+  { id: 5, type: PINK_SHARP_PLUS },
+  { id: 6, type: GREEN_CIRCLE },
+  { id: 7, type: YELLOW_ROUND_PLUS },
+  { id: 8, type: BLUE_PLUS },
+
+  { id: 9, type: BLUE_SQUARE },
+  { id: 10, type: GREEN_SQUARE },
+  { id: 11, type: PINK_ROUND_PLUS },
+  { id: 12, type: ORANGE_FLOWER },
+
+  { id: 13, type: DARK_BLUE_SQUARE_PLUS },
+  { id: 14, type: ORANGE_SHARP_PLUS },
+  { id: 15, type: BLUE_SHARP_PLUS },
+  { id: 16, type: YELLOW_FLOWER },
+
+  { id: 17, type: PINK_CIRCLE },
+  { id: 18, type: YELLOW_SQUARE_PLUS },
+  { id: 19, type: PURPLE_STAR },
+  { id: 20, type: YELLOW_STAR },
+  { id: 21, type: BLUE_STAR },
+  { id: 22, type: PINK_DIAMOND_INSIDE },
 ]
 
 const PIECES_DB = [
-  { id: 1, left: BOARD, top: BLUE_PLUS, right: PINK_DIAMOND, bottom: BOARD },
+  {
+    id: 1,
+    left: BOARD,
+    top: BLUE_PLUS,
+    right: PINK_DIAMOND_INSIDE,
+    bottom: BOARD,
+  },
   { id: 2, left: BOARD, top: BLUE_PLUS, right: OCTAGON, bottom: BOARD },
   {
     id: 3,
     left: BOARD,
     top: YELLOW_FLOWER,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
   {
     id: 4,
     left: BOARD,
-    top: PINK_DIAMOND,
+    top: PINK_DIAMOND_INSIDE,
     right: YELLOW_FLOWER,
     bottom: BOARD,
   },
@@ -98,7 +109,7 @@ const PIECES_DB = [
     id: 9,
     left: BLUE_PLUS,
     top: ORANGE_SHARP_PLUS,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
   {
@@ -148,7 +159,7 @@ const PIECES_DB = [
     id: 16,
     left: YELLOW_FLOWER,
     top: BLUE_STAR,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 
@@ -219,79 +230,79 @@ const PIECES_DB = [
   },
   {
     id: 26,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: YELLOW_ROUND_PLUS,
     right: YELLOW_FLOWER,
     bottom: BOARD,
   },
   {
     id: 27,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: YELLOW_ROUND_PLUS,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
   {
     id: 28,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: BLUE_SHARP_PLUS,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 
   {
     id: 29,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: BLUE_STAR,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
   {
     id: 30,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: PINK_SQUARE_PLUS,
     right: ORANGE_FLOWER,
     bottom: BOARD,
   },
   {
     id: 31,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: GREEN_SQUARE,
     right: YELLOW_FLOWER,
     bottom: BOARD,
   },
   {
     id: 32,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: PURPLE_STAR,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 
   {
     id: 33,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: ORANGE_ROUND_PLUS,
     right: YELLOW_FLOWER,
     bottom: BOARD,
   },
   {
     id: 34,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: ORANGE_ROUND_PLUS,
     right: OCTAGON,
     bottom: BOARD,
   },
   {
     id: 35,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: BLUE_SQUARE,
     right: ORANGE_FLOWER,
     bottom: BOARD,
   },
   {
     id: 36,
-    left: PINK_DIAMOND,
+    left: PINK_DIAMOND_INSIDE,
     top: PINK_CIRCLE,
     right: OCTAGON,
     bottom: BOARD,
@@ -324,7 +335,7 @@ const PIECES_DB = [
     id: 41,
     left: OCTAGON,
     top: YELLOW_STAR,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
   { id: 42, left: OCTAGON, top: GREEN_SQUARE, right: BLUE_PLUS, bottom: BOARD },
@@ -339,7 +350,7 @@ const PIECES_DB = [
     id: 44,
     left: OCTAGON,
     top: GREEN_SQUARE,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 
@@ -414,7 +425,7 @@ const PIECES_DB = [
     id: 56,
     left: ORANGE_FLOWER,
     top: ORANGE_ROUND_PLUS,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 
@@ -443,7 +454,7 @@ const PIECES_DB = [
     id: 60,
     left: ORANGE_FLOWER,
     top: PINK_CIRCLE,
-    right: PINK_DIAMOND,
+    right: PINK_DIAMOND_INSIDE,
     bottom: BOARD,
   },
 

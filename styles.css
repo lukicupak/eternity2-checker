@@ -1,10 +1,24 @@
+:root {
+  --main-color: white;
+  --main-background-color: #121212;
+}
+
 body {
   text-align: center;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
+}
+
+.checkbox-label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 button {
   min-width: 150px;
   min-height: 30px;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
 }
 
 table {
@@ -13,6 +27,16 @@ table {
 
 .inputWrapper {
   margin-bottom: 50px;
+}
+
+#input {
+  width: 800px;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
+}
+
+#squaresMap {
+  border: 1px solid black;
 }
 
 #error {

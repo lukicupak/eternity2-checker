@@ -16,6 +16,14 @@ class Calculator {
     return this.combination
   }
 
+  getPreviousCombination() {
+    return this.previousCombination
+  }
+
+  getMap() {
+    return this.map
+  }
+
   setMoldVariables() {
     this.generateMoldMap()
     this.setPiecesCopy()
@@ -63,6 +71,7 @@ class Calculator {
     )
     if (increaseResult.error) return increaseResult
 
+    this.previousCombination = this.combination
     this.combination = increaseResult.combination
     this.moveBackCombinationPointer(increaseResult.indexMoves)
 
@@ -234,11 +243,8 @@ class Calculator {
 
       if (checkedElement > element) {
         right = i - 1
-      } else if (checkedElement < element) {
-        left = i + 1
-      } else {
-        elements.splice(i, 0, element)
-        return true
+      } else if (checkedElement <= element) {
+        left = i
       }
     }
 

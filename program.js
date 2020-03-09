@@ -1,5 +1,5 @@
-const NUMBER_OF_SQUARES = 480
 const CYCLE_TIME = 1000
+const NUMBER_OF_SQUARES = 480
 
 class Program {
   constructor() {
@@ -119,7 +119,7 @@ class Program {
     this.storeResultsInLocalStore()
 
     if (this.shouldCalculating) {
-      setTimeout(this.calculatingLoop, CYCLE_TIME / 100)
+      setTimeout(this.calculatingLoop, CYCLE_TIME / 25)
     } else {
       this.onCalculatingStop()
     }
@@ -138,12 +138,18 @@ class Program {
   }
 
   updateInterfaceAfterCycle() {
+    const map = this.calculator.getMap()
+
+    this.interface.clearCanvas()
+    this.interface.drawMap(map)
+    this.interface.drawPiecesLines()
+
     this.interface.updateAfterCycle({
       totalTime: this.totalTime,
       cycleTime: this.cycleTime,
       cycleCombinations: this.cycleCombinations,
       totalCombinations: this.totalCombinations,
-      currentCombination: this.calculator.getCombination(),
+      currentCombination: this.calculator.getPreviousCombination(),
     })
   }
 

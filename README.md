@@ -4,7 +4,7 @@ JavaScript script for searching solution for [Eternity 2 puzzle](https://en.wiki
 
 # squares
 
-###### edge elements:
+###### edge squares:
 
 4 ![Square](/squares/4.png)
 8 ![Square](/squares/8.png)
@@ -12,7 +12,7 @@ JavaScript script for searching solution for [Eternity 2 puzzle](https://en.wiki
 16 ![Square](/squares/16.png)
 22 ![Square](/squares/22.png)
 
-###### center elements:
+###### center squares:
 
 1 ![Square](/squares/1.png)
 2 ![Square](/squares/2.png)
@@ -34,6 +34,6 @@ JavaScript script for searching solution for [Eternity 2 puzzle](https://en.wiki
 
 # info
 
-Tested on 2013 laptop with Windows 10, using chrome browser. It gives about 95000 combinations per second.
+Tested on 2013 laptop with Windows 10, using chrome browser. It gives about 110000 combinations per second.
 Script stores current combination in localStorage - you can load it later.
 It works in 1s cycles, after cycle it updates statistics.
